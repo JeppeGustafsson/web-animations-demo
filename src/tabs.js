@@ -23,8 +23,12 @@ function toggleActiveTab(event) {
     midpage.classList.remove('active');
     lastpage.classList.remove('active');
 
-    colorBlock.style.top = '0';
     colorBlock.style.backgroundColor = '#A8E5CF';
+    if (window.innerWidth < 720) {
+      colorBlock.style.left = '0';
+    } else {
+      colorBlock.style.top = '0';
+    }
   }
   if (
     event.target.innerText === midpage.id &&
@@ -34,8 +38,12 @@ function toggleActiveTab(event) {
     midpage.classList.add('active');
     lastpage.classList.remove('active');
 
-    colorBlock.style.top = '33%';
     colorBlock.style.backgroundColor = '#FFD3B6';
+    if (window.innerWidth < 720) {
+      colorBlock.style.left = '33%';
+    } else {
+      colorBlock.style.top = '33%';
+    }
   }
   if (
     event.target.innerText === lastpage.id &&
@@ -45,7 +53,11 @@ function toggleActiveTab(event) {
     midpage.classList.remove('active');
     lastpage.classList.add('active');
 
-    colorBlock.style.top = '68%';
     colorBlock.style.backgroundColor = '#FF8B94';
+    if (window.innerWidth < 720) {
+      colorBlock.style.left = '68%';
+    } else {
+      colorBlock.style.top = '68%';
+    }
   }
 }
