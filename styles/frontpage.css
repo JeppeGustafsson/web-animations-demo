@@ -1,4 +1,5 @@
 .section.one {
     background-color: #A8E5CF;
+    z-index: 2;
     position: relative;
 }

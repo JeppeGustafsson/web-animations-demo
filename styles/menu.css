@@ -43,9 +43,10 @@
     top: 0;
     left: 0;
     position: absolute;
-    transition: all 0.5s;
     z-index: 4;
     pointer-events: none;
+    background-color: #A8E5CF;
+    transition: all 0.5s;
 }
 
 @media screen and (max-width: 720px) {
