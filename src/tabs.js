@@ -1,17 +1,11 @@
-const menuItems = Array.from(
-  document.getElementById('menu').children
-);
-const sections = Array.from(
-  document.getElementById('sections').children
-);
 const frontpage = document.getElementById('Home');
 const midpage = document.getElementById('About');
 const lastpage = document.getElementById('Contact');
 const colorBlock = document.getElementById('color-block');
 
-menuItems.forEach((item) =>
+const menuItems = Array.from(document.getElementById('menu').children).forEach((item) => {
   item.addEventListener('click', toggleActiveTab)
-);
+});
 
 const showAnimation = [
   { transform: 'translateX(-120%)' },
@@ -28,6 +22,7 @@ const timingNoDelay = {
   fill: 'forwards',
   easing: 'ease',
 };
+
 const timingWithDelay = {
   duration: 500,
   delay: 500,
@@ -79,7 +74,7 @@ function toggleActiveTab(event) {
       lastpage.animate(showAnimation, timingNoDelay);
 
       colorBlock.style.backgroundColor = '#FF8B94';
-      colorBlock.animate(moveTabAnimation('200%'), timingNoDelay);
+      colorBlock.animate(moveTabAnimation('205%'), timingNoDelay);
       break;
   }
 }
